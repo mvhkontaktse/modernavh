@@ -4,40 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moderna Veteranbils Handeln</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="email"], input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #555;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Välj en kategori</h1>
-        <div class="profile-selection">
-            <div class="profile">
-                <a href="#form-section">
-                    <img src="brytarlost-kit.jpg" alt="Brytarlöst Kit">
-                    <h2>Brytarlöst Kit</h2>
-                </a>
-            </div>
-            <div class="profile coming-soon">
-                <img src="kommer-snart.jpg" alt="Kommer Snart">
-                <h2>Kommer Snart</h2>
-            </div>
-            <div class="profile coming-soon">
-                <img src="kommer-snart.jpg" alt="Kommer Snart">
-                <h2>Kommer Snart</h2>
-            </div>
-        </div>
 
-        <div id="form-section" class="container">
-            <h2>Skicka en förfrågan</h2>
-            <form action="mailto:mvh.kontakt.se@gmail.com" method="post" enctype="text/plain">
-                <label for="email">Din e-post:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="distributor">Fördelare & Modellnummer:</label>
-                <textarea id="distributor" name="distributor" rows="4" required></textarea>
-                
-                <button type="submit">Skicka</button>
-            </form>
-        </div>
+    <header>
+        <h1>Moderna Veteranbils Handeln</h1>
+    </header>
+
+    <div class="container">
+        <h2>Skicka en förfrågan om brytarlöst kit</h2>
+        <form action="mailto:din-epost@example.com" method="post" enctype="text/plain">
+            <label for="email">Din e-postadress:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="distributor">Fördelare:</label>
+            <input type="text" id="distributor" name="distributor" required>
+
+            <label for="model">Modellnummer:</label>
+            <input type="text" id="model" name="model" required>
+
+            <label for="message">Ytterligare information (valfritt):</label>
+            <textarea id="message" name="message"></textarea>
+
+            <button type="submit">Skicka förfrågan</button>
+        </form>
     </div>
+
 </body>
 </html>
