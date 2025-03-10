@@ -1,53 +1,67 @@
+/* Grundläggande stil */
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #141414; /* Mörk bakgrund som Netflix */
+    color: #fff;
+}
+
+header {
+    background-color: #000;
+    padding: 20px 0;
     text-align: center;
-    padding: 20px;
-    background-color: #141414;
-    color: white;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
 }
 
 .container {
-    max-width: 600px;
-    margin: auto;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
 }
 
-h1 {
-    font-size: 28px;
+h2 {
+    font-size: 2rem;
     margin-bottom: 20px;
 }
 
-.profile-selection {
+/* Produktgrid */
+.product-grid {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;
 }
 
-.profile {
-    background: #222;
-    padding: 20px;
+/* Produktitem */
+.product-item {
+    background-color: #333;
     border-radius: 10px;
+    overflow: hidden;
+    width: 200px;
     text-align: center;
-    width: 150px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    transition: transform 0.3s, background 0.3s;
 }
 
-.profile:hover {
-    transform: scale(1.1);
-    background: #333;
+.product-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
-.profile img {
+.product-item img {
     width: 100%;
-    border-radius: 10px;
+    height: auto;
+    display: block;
 }
 
-.profile h2 {
-    font-size: 16px;
-    margin-top: 10px;
-}
-
-.coming-soon {
-    opacity: 0.5;
+.product-item p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
