@@ -2,51 +2,52 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: #141414;
+    color: white;
 }
 
 .container {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
+    max-width: 600px;
     margin: auto;
 }
 
-h1, h2 {
-    color: #333;
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
-p {
-    color: #555;
+.profile-selection {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-input, textarea, button {
-    width: 100%;
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-button {
-    background: #007BFF;
-    color: white;
-    border: none;
+.profile {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 150px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: transform 0.3s, background 0.3s;
 }
 
-button:hover {
-    background: #0056b3;
+.profile:hover {
+    transform: scale(1.1);
+    background: #333;
 }
 
-label {
-    font-weight: bold;
-    display: block;
-    text-align: left;
+.profile img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.profile h2 {
+    font-size: 16px;
     margin-top: 10px;
-    color: #333;
+}
+
+.coming-soon {
+    opacity: 0.5;
 }
