@@ -1,4 +1,3 @@
-// Enkel validering av kontaktformuläret
 document.getElementById('contact-form').addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -8,7 +7,7 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
 
     if (email && distributor && model) {
         alert('Tack för din förfrågan! Vi återkommer snart.');
-        document.getElementById('contact-form').reset();
+        this.submit(); // Skickar formuläret
     } else {
         alert('Vänligen fyll i alla obligatoriska fält.');
     }
