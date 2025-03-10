@@ -35,14 +35,32 @@
         button:hover {
             background: #0056b3;
         }
+        .confirmation {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+        }
     </style>
+    <script>
+        function showConfirmation(event) {
+            event.preventDefault();
+            document.getElementById('confirmationMessage').style.display = 'block';
+            setTimeout(() => {
+                document.getElementById('confirmationMessage').style.display = 'none';
+            }, 5000);
+        }
+    </script>
 </head>
 <body>
     <div class="container">
         <h1>Moderna Veteranbils Handeln</h1>
         <p>Vi säljer brytarlöst kit för din veteranbil!</p>
         <h2>Skicka en förfrågan</h2>
-        <form action="mailto:dittmail@example.com" method="post" enctype="text/plain">
+        <form action="mailto:mvh.kontakt.se@gmail.com" method="post" enctype="text/plain" onsubmit="showConfirmation(event)">
             <label for="email">Din e-post:</label>
             <input type="email" id="email" name="email" required>
             
@@ -51,6 +69,9 @@
             
             <button type="submit">Skicka</button>
         </form>
+        <div id="confirmationMessage" class="confirmation">
+            Tack! Din förfrågan har skickats.
+        </div>
     </div>
 </body>
 </html>
